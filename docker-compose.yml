@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  digidex_front:
+    build: .
+    command: npm start
+    container_name: digidex_portail
+    restart: always
+    volumes:
+      - .:/src
+    ports:
+      - "3000:3001"
+    networks:
+      - digidex-network
+networks:
+  digidex-network:
+    driver: bridge
