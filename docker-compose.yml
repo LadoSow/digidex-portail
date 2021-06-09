@@ -1,16 +1,20 @@
-version: '3.3'
+version: '3.7'
 services:
   digidex_front:
-    build: .
-    command: npm start
-    container_name: digidex_portail
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: digidex_front
     restart: always
     volumes:
-      - .:/src
+      - '.:/app'
+      - '/app/node_modules'
     ports:
-      - "3000:3001"
+      - "3001:3000"
     networks:
       - digidex-network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
 networks:
   digidex-network:
     driver: bridge

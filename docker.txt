@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:alpine
+FROM node:13.12.0-alpine as build
 
 MAINTAINER ladosow <ladosow@gmail.com>
 
@@ -17,7 +17,15 @@ RUN npm install react-scripts@3.4.1 -g --silent
 # add digidex-portail
 COPY . ./
 
-# for react-router
-# COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+RUN npm run build
 
+FROM nginx:stable-alpine
+COPY --from=build /app/build usr/share/nging/html
+
+# for react-router
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 30
+
+# start app
+# CMD ["nginx", "-g", "daemon off;"]
 CMD ["npm", "start"]
