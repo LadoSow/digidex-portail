@@ -27,5 +27,5 @@ COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 30
 
 # start app
-# CMD ["nginx", "-g", "daemon off;"]
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]
+# CMD ["npm", "start"]

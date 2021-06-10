@@ -1,4 +1,4 @@
-import {SERVER} from '../Host';
+import {LOCAL} from '../Host';
 
-export const SIT_API_URL = `${SERVER}/sites`;
+export const SIT_API_URL = `${LOCAL}/sites`;
 export const GET_ALL_SIT = '/';
