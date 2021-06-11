@@ -47,8 +47,7 @@ const useStyles = makeStyles(() => createStyles({
         textTransform: 'none'
     },
     divConnexion: {
-        borderLeft: '2px solid #989898',
-        background: '#e2e0e085',
+        borderLeft: '2px solid #989898'
     },
 }));
 

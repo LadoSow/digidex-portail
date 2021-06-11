@@ -17,28 +17,24 @@ const AllRoutes = () => {
                         <LoginPage/>
                 </Route>
                 <PrivateRoute exact strict path='/'>
-                    <NavbarPage/>
                         <HomeProvider>
                             <Home/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/acceuil'>
-                    <NavbarPage/>
                         <HomeProvider>
                             <Home/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/applications'>
-                    <NavbarPage/>
                         <HomeProvider>
                             <Application/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/profil'>
-                    <NavbarPage/>
                     <HomeProvider>
                         <UserProvider>
                             <EditUser/>
@@ -47,7 +43,6 @@ const AllRoutes = () => {
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/update-password'>
-                    <NavbarPage/>
                         <UserProvider>
                             <EditPassword/>
                         </UserProvider>

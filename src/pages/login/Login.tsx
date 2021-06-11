@@ -15,7 +15,7 @@ export default function LoginPage() {
 
             <Grid className={classes.divConnexion} container item xs={7} direction='column' justify='center' alignItems='stretch'>
                 <Grid className={classes.root}>
-                    <Typography variant={'h3'}>
+                    <Typography variant={'h3'} style={{color: "#5c99da"}}>
                         Se connecter
                     </Typography>
                 </Grid>
@@ -26,7 +26,7 @@ export default function LoginPage() {
                             <Form>
                                 <Grid className={classes.form}>
                                     <Grid className={classes.start}>
-                                        <Typography >
+                                        <Typography style={{color: "#569cd9"}}>
                                             Renseignez votre login et mot de passe
                                         </Typography>
                                     </Grid>
