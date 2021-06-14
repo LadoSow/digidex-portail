@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
-import {MDBContainer} from "mdbreact";
+import {MDBContainer} from 'mdb-react-ui-kit';
 
 const drawerWidth = 240;
 
@@ -93,12 +93,12 @@ export default function Admin(props: Props) {
 
     return (
         <div className={classes.root}>
-            <nav className={classes.drawer} aria-label="mailbox folders">
+            <nav className={classes.drawer} aria-label='mailbox folders'>
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                <Hidden smUp implementation="css">
+                <Hidden smUp implementation='css'>
                     <Drawer
                         container={container}
-                        variant="temporary"
+                        variant='temporary'
                         anchor={theme.direction === 'rtl' ? 'right' : 'left'}
                         open={mobileOpen}
                         onClose={handleDrawerToggle}
@@ -112,12 +112,12 @@ export default function Admin(props: Props) {
                         {drawer}
                     </Drawer>
                 </Hidden>
-                <Hidden xsDown implementation="css">
+                <Hidden xsDown implementation='css'>
                     <Drawer
                         classes={{
                             paper: classes.drawerPaper
                         }}
-                        variant="permanent"
+                        variant='permanent'
                         open
                     >
                         {drawer}

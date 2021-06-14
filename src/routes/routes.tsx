@@ -6,6 +6,7 @@ import LoginPage from '../pages/login/Login';
 import Application from '../pages/application/Application';
 import {HomeProvider, UserProvider, AuthProvider, useAuthContext} from '../context';
 import NavbarPage from '../components/Header/NavBar';
+import HeaderPage from '../components/Header/Header';
 import FooterPage from '../components/Footer/Footer';
 import EditPassword from '../pages/user/Password';
 
@@ -17,28 +18,28 @@ const AllRoutes = () => {
                         <LoginPage/>
                 </Route>
                 <PrivateRoute exact strict path='/'>
-                    <NavbarPage/>
+                    <HeaderPage/>
                         <HomeProvider>
                             <Home/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/acceuil'>
-                    <NavbarPage/>
+                    <HeaderPage/>
                         <HomeProvider>
                             <Home/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/applications'>
-                    <NavbarPage/>
+                    <HeaderPage/>
                         <HomeProvider>
                             <Application/>
                         </HomeProvider>
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/profil'>
-                    <NavbarPage/>
+                    <HeaderPage/>
                     <HomeProvider>
                         <UserProvider>
                             <EditUser/>

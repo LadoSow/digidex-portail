@@ -16,7 +16,7 @@ const CardComponent: React.FC<CardProps> = ({title, color, location, content}) =
 
     return (
         <MDBCol style={{ maxWidth: '22rem', margin:'50px'}}>
-            <MDBCard style={{boxShadow: "0 1px 5px #8080804f"}}>
+            <MDBCard style={{boxShadow: '0 1px 5px #8080804f'}}>
                 <MDBCardImage className='img-fluid' src={CoverImage1} />
                 <MDBCardBody>
                     <MDBCardTitle className={classes.cardtitle}>{title}</MDBCardTitle>
