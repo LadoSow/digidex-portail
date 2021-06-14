@@ -38,10 +38,13 @@ const HeaderPage = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
 
           <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav className='me-auto'>
-                  <Nav.Link href='/acceuil'>Acceuil</Nav.Link>
-
-                  <Nav.Link href='/applications'>Applications</Nav.Link>
+              <Nav className='me-auto' activeKey={sessionStorage.getItem('active')!} onSelect={(selectedKey)  => sessionStorage.setItem('active',selectedKey!)}>
+                  <Nav.Item>
+                      <Nav.Link eventKey={'/acceuil'} href='/acceuil'>Acceuil</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                      <Nav.Link eventKey={'/applications'} href='/applications'>Applications</Nav.Link>
+                  </Nav.Item>
               </Nav>
 
               <Nav>
@@ -56,7 +59,7 @@ const HeaderPage = () => {
                       <NavDropdown.Divider />
 
                       <NavDropdown.Item onClick={signOut} href='/login'>
-                          Déconnexion &nbsp;&nbsp;&nbsp; <MDBIcon className='text-default' icon='sign-out-alt' />
+                          Déconnexion <MDBIcon style={{ marginLeft: '25px'}} icon='sign-out-alt' />
                       </NavDropdown.Item>
                   </NavDropdown>
               </Nav>

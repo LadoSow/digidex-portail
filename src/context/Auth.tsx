@@ -61,6 +61,7 @@ function Provider() {
         sessionStorage.removeItem('domaines');
         sessionStorage.removeItem('id');
         sessionStorage.removeItem('mail');
+        sessionStorage.removeItem('active');
     }
 
     return {

@@ -5,7 +5,6 @@ import EditUser from '../pages/user/Profil';
 import LoginPage from '../pages/login/Login';
 import Application from '../pages/application/Application';
 import {HomeProvider, UserProvider, AuthProvider, useAuthContext} from '../context';
-import NavbarPage from '../components/Header/NavBar';
 import HeaderPage from '../components/Header/Header';
 import FooterPage from '../components/Footer/Footer';
 import EditPassword from '../pages/user/Password';
@@ -15,7 +14,7 @@ const AllRoutes = () => {
         <AuthProvider>
             <Switch>
                 <Route path='/login'>
-                        <LoginPage/>
+                    <LoginPage/>
                 </Route>
                 <PrivateRoute exact strict path='/'>
                     <HeaderPage/>
@@ -48,7 +47,7 @@ const AllRoutes = () => {
                     <FooterPage/>
                 </PrivateRoute>
                 <PrivateRoute path='/update-password'>
-                    <NavbarPage/>
+                    <HeaderPage/>
                         <UserProvider>
                             <EditPassword/>
                         </UserProvider>
