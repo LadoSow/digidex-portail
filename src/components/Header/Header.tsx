@@ -45,6 +45,9 @@ const HeaderPage = () => {
                   <Nav.Item>
                       <Nav.Link eventKey={'/applications'} href='/applications'>Applications</Nav.Link>
                   </Nav.Item>
+                  <Nav.Item>
+                      <Nav.Link eventKey={'/incidents'} href='/incidents'>Incidents</Nav.Link>
+                  </Nav.Item>
               </Nav>
 
               <Nav>

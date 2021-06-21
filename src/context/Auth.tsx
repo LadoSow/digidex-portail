@@ -56,12 +56,8 @@ function Provider() {
     }
 
     function signOut(){
-        sessionStorage.removeItem('token');
-        sessionStorage.removeItem('profil');
-        sessionStorage.removeItem('domaines');
-        sessionStorage.removeItem('id');
-        sessionStorage.removeItem('mail');
-        sessionStorage.removeItem('active');
+        //Remove all session storage item
+        sessionStorage.clear();
     }
 
     return {

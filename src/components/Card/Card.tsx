@@ -9,9 +9,10 @@ interface CardProps {
     color?: any;
     location: string;
     content?: string;
+    target?:string;
 }
 
-const CardComponent: React.FC<CardProps> = ({title, color, location, content}) => {
+const CardComponent: React.FC<CardProps> = ({title, color, location, content, target}) => {
     const classes = useStyles();
 
     return (
@@ -21,7 +22,7 @@ const CardComponent: React.FC<CardProps> = ({title, color, location, content}) =
                 <MDBCardBody>
                     <MDBCardTitle className={classes.cardtitle}>{title}</MDBCardTitle>
                     <MDBCardText className={classes.cardcontent}>{content}</MDBCardText>
-                    <MDBBtn color={color} className={classes.cardbutton} href={location} >Ouvrir</MDBBtn>
+                    <MDBBtn color={color} className={classes.cardbutton} href={location} target={target!}>Ouvrir</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
         </MDBCol>

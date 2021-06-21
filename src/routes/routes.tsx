@@ -4,6 +4,7 @@ import Home from '../pages/home/Home';
 import EditUser from '../pages/user/Profil';
 import LoginPage from '../pages/login/Login';
 import Application from '../pages/application/Application';
+import HomeIncident from '../pages/gestionincidents/Home';
 import {HomeProvider, UserProvider, AuthProvider, useAuthContext} from '../context';
 import HeaderPage from '../components/Header/Header';
 import FooterPage from '../components/Footer/Footer';
@@ -51,6 +52,13 @@ const AllRoutes = () => {
                         <UserProvider>
                             <EditPassword/>
                         </UserProvider>
+                    <FooterPage/>
+                </PrivateRoute>
+                <PrivateRoute path='/incidents'>
+                    <HeaderPage/>
+                    <UserProvider>
+                        <HomeIncident/>
+                    </UserProvider>
                     <FooterPage/>
                 </PrivateRoute>
             </Switch>
