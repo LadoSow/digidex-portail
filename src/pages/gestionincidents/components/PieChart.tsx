@@ -31,6 +31,7 @@ const PieChart = () => {
     return (
         <div style={{height: '50vh', width: '45%'}}>
             <Pie type={'pie'} data={data} options={options}/>
+            <h5 style={{textAlign: 'center', marginTop: '20px', color: 'gray'}}>Graph Mensuel</h5>
         </div>
     );
 }

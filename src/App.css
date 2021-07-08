@@ -28,8 +28,11 @@
   color: #61dafb;
 }
 
-#basic-nav-dropdown {
+#user-nav-dropdown {
   color: #2cbbad;
+}
+#notif-nav-dropdown {
+  color: #ffffff00;
 }
 
 @keyframes App-logo-spin {

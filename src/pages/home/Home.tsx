@@ -11,10 +11,10 @@ const Home = () => {
     const {applications, domaines, sits} = useHomeContext();
 
     return (
-        <Container>
+        <Container disableGutters>
             <MDBCol>
                 <MDBRow>
-                    <div style={{width: '100%', marginTop: '10px'}}>
+                    <div style={{width: '90%', margin: '10px auto'}}>
                         <Notification/>
                     </div>
                 </MDBRow>

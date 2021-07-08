@@ -6,6 +6,7 @@ import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import SettingsIcon from '@material-ui/icons/Settings';
 import {getVal} from '../../config/Encryption';
 import {MDBIcon} from 'mdb-react-ui-kit';
+import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles(() =>
     createStyles({
@@ -22,12 +23,21 @@ const useStyles = makeStyles(() =>
     })
 );
 
+function Alert(props: AlertProps) {
+    return <MuiAlert elevation={6} variant='filled' {...props} />;
+}
 
 const HeaderPage = () => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
   const {signOut} = useAuthContext();
 
   const navDropdownTitle = (<span style={{color: '#2cbbad'}}> {getVal('profil')} <MDBIcon icon='user'/> </span>);
+  const notifTitle = (<span style={{color: '#2cbbad'}}> <MDBIcon color={'white'} icon='bell' /> 1</span> );
+
+  const handleClose = () => {
+    setOpen(true);
+  };
 
   return (
       <Navbar className={classes.navbar} sticky='top' bg='dark' expand='lg' variant='dark'>
@@ -48,10 +58,23 @@ const HeaderPage = () => {
                   <Nav.Item>
                       <Nav.Link eventKey={'/incidents'} href='/incidents'>Incidents</Nav.Link>
                   </Nav.Item>
+                  <Nav.Item>
+                      <NavDropdown title={notifTitle} id='notif-nav-dropdown' style={{marginRight: '20px'}}>
+                          <NavDropdown.Item>
+                              <Alert hidden={open} onClose={handleClose} severity='error'> Notifications ici !</Alert>
+                          </NavDropdown.Item>
+                          {/*<NavDropdown.Item>
+                              <Alert severity='warning'>Incident: Serveur #AOL ne répond plus !</Alert>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item>
+                              <Alert severity='success'>Informations: Incident tel résolu !</Alert>
+                          </NavDropdown.Item>*/}
+                      </NavDropdown>
+                  </Nav.Item>
               </Nav>
 
               <Nav>
-                  <NavDropdown title={navDropdownTitle} id='basic-nav-dropdown' style={{marginRight: '20px'}}>
+                  <NavDropdown title={navDropdownTitle} id='user-nav-dropdown' style={{marginRight: '20px'}}>
                       <NavDropdown.Item href='/profil'>
                           Modifier votre profil
                       </NavDropdown.Item>

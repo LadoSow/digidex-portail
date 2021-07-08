@@ -19,14 +19,15 @@ const Notification = () => {
         setOpen(false);
         sleep(5000).then(()=> {
             setOpen(true);
-            clearTimeout();
         });
     }
 
-    setTimeout(afficher, 20000);
+    sleep(50000).then(()=> {
+        afficher();
+    });
 
     return (
-        <div hidden={open} >
+        <div hidden={open} style={{ marginBottom: '15px'}}>
             <Alert severity='warning'>
                 Incident: Le serveur #SRV54567 ne répond plus !
             </Alert>
