@@ -35,6 +35,11 @@
   color: #ffffff00;
 }
 
+div.dropdown-menu.show{
+  margin-left: -55px !important;
+  margin-top: 10px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
