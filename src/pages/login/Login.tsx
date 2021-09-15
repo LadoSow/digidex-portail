@@ -11,26 +11,26 @@ export default function LoginPage() {
 
     return (
         <Container disableGutters className={classes.container}>
-            <Grid container item xs={5} className={classes.divImage} alignItems='flex-end' direction='row' justify='flex-start'/>
+            <Grid container item xs={5} className={classes.divImage} alignItems='flex-end' direction='row' justifyContent='flex-start'/>
 
-            <Grid className={classes.divConnexion} container item xs={7} direction='column' justify='center' alignItems='stretch'>
+            <Grid className={classes.divConnexion} container item xs={7} direction='column' justifyContent='center' alignItems='stretch'>
                 <Grid className={classes.root}>
                     <Typography variant={'h3'} style={{color: "#5c99da"}}>
                         Se connecter
                     </Typography>
                 </Grid>
                 <Grid>
-                    <Grid container direction='column' justify='flex-start' alignItems='stretch'>
+                    <Grid container direction='column' justifyContent='flex-start' alignItems='stretch'>
                         <Formik validationSchema={validation} initialValues={initialForm} onSubmit={connexion}>
                             {({errors, touched, values, handleChange}) => (
-                            <Form>
+                            <Form autoComplete={"on"}>
                                 <Grid className={classes.form}>
                                     <Grid className={classes.start}>
                                         <Typography style={{color: "#569cd9"}}>
                                             Renseignez votre login et mot de passe
                                         </Typography>
                                     </Grid>
-                                    <Grid container item justify='center' spacing={2}>
+                                    <Grid container item justifyContent='center' spacing={2}>
                                         <Grid item xs={10} sm={10} >
                                             <TextField
                                                 fullWidth
@@ -46,6 +46,7 @@ export default function LoginPage() {
                                         </Grid>
                                         <Grid item xs={10} sm={10} >
                                             <TextField
+                                                autoComplete={"on"}
                                                 fullWidth
                                                 type={'password'}
                                                 id='password'
@@ -61,7 +62,7 @@ export default function LoginPage() {
 
                                         <div hidden={hidden} className={classes.info} >Login ou mot de passe incorrect</div>
                                     </Grid>
-                                    <Grid container item justify='center' style={{padding: "35px"}} spacing={2}>
+                                    <Grid container item justifyContent='center' style={{padding: "35px"}} spacing={2}>
                                         <Grid item xs={5} sm={5} >
                                             <Button type={'submit'} className={classes.submit}>Connexion</Button>
                                         </Grid>

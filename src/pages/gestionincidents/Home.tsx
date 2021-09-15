@@ -27,7 +27,7 @@ const HomeIncident = () => {
                     </MDBRow>
                 </MDBRow>
                 <MDBRow>
-                    <Grid container direction='row' justify='center' alignItems='center' style={{marginTop: '50px'}}>
+                    <Grid container direction='row' justifyContent='center' alignItems='center' style={{marginTop: '50px'}}>
                         <LineChart/>
                         <PieChart/>
                     </Grid>

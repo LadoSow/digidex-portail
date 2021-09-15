@@ -1,4 +1,4 @@
-import {createMuiTheme, createStyles, makeStyles} from '@material-ui/core';
+import {createTheme, createStyles, makeStyles} from '@material-ui/core';
 import Cover from '../../assets/img/update.png';
 import {frFR} from '@material-ui/data-grid';
 
@@ -71,7 +71,7 @@ const useStyles = makeStyles(() => createStyles({
     }
 }));
 
-const theme = createMuiTheme(
+const theme = createTheme(
     {
         palette: {
             primary: { main: '#0f9fa8' },

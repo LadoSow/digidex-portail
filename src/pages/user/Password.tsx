@@ -14,8 +14,8 @@ const EditPassword = () => {
     return (
         <Container disableGutters className={classes.container}>
 
-            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justify='center'/>
-            <Grid container item xs={8} direction='column' justify='flex-start' alignItems='stretch'>
+            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justifyContent='center'/>
+            <Grid container item xs={8} direction='column' justifyContent='flex-start' alignItems='stretch'>
                 <Grid className={classes.title}>
                     <Typography variant={'h4'}>
                         Mot de passe:
@@ -24,7 +24,7 @@ const EditPassword = () => {
                 <Grid>
                     <NotificationContainer />
 
-                    <Grid container direction='column' justify='flex-start' alignItems='stretch'>
+                    <Grid container direction='column' justifyContent='flex-start' alignItems='stretch'>
                         <Formik validationSchema={validation} initialValues={initialForm} onSubmit={updatePassword}>
                             {({errors, touched, handleReset, values, handleChange}) => (
                                 <Form>
@@ -34,7 +34,7 @@ const EditPassword = () => {
                                                 Renseigner votre nouveau mot de passe
                                             </Typography>
                                         </Grid>
-                                        <Grid container item justify='center' spacing={2}>
+                                        <Grid container item justifyContent='center' spacing={2}>
                                             <Grid item xs={10} sm={10} >
                                                 <Grid item xs={12} sm={12} >
                                                     <TextField
@@ -81,7 +81,7 @@ const EditPassword = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid className={classes.table}>
-                                        <Grid container direction='row' justify='center' alignItems='center' spacing={2}>
+                                        <Grid container direction='row' justifyContent='center' alignItems='center' spacing={2}>
                                             <Grid item>
                                                 <Button type={'submit'} className={classes.submit}>Modifier</Button>
                                             </Grid>

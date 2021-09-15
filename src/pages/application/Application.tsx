@@ -20,16 +20,16 @@ const Application = () =>  {
 
     return (
         <Container disableGutters className={classes.container}>
-            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justify='center'/>
+            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justifyContent='center'/>
 
-            <Grid container item xs={8} direction='column' justify='flex-start' alignItems='stretch'>
+            <Grid container item xs={8} direction='column' justifyContent='flex-start' alignItems='stretch'>
                 <Grid className={classes.root}>
                     <Typography variant={'h4'}>
                         Applications
                     </Typography>
                 </Grid>
                 <Grid>
-                    <Grid container direction='column' justify='flex-start' alignItems='stretch' className={classes.form}>
+                    <Grid container direction='column' justifyContent='flex-start' alignItems='stretch' className={classes.form}>
                         <Formik initialValues={initialValues} onSubmit={search} >
                             {({values }) => (
                             <Form>
@@ -39,7 +39,7 @@ const Application = () =>  {
                                                 Sélectionnez un domaine pour voir ses applications.
                                             </Typography>
                                         </Grid>
-                                        <Grid container item justify='center' spacing={2}>
+                                        <Grid container item justifyContent='center' spacing={2}>
                                             <Grid item xs={12} sm={12} >
                                                 <Field className={classes.select} as='select' name='domaine' >
                                                     <option value=''>{''}</option>
@@ -51,7 +51,7 @@ const Application = () =>  {
                                     <Grid>
                                         <Grid style={{ height: '60vh', width: '100%' }}>
                                             <ThemeProvider theme={theme}>
-                                                <DataGrid rows={populateGrid(values.domaine)} columns={columns} pageSize={5} disableSelectionOnClick/>
+                                                <DataGrid rows={populateGrid(values.domaine)} columns={columns} autoPageSize={true} disableSelectionOnClick/>
                                             </ThemeProvider>
                                         </Grid>
                                     </Grid>

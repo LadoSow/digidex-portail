@@ -36,7 +36,7 @@ const LineChart = () => {
 
     return (
         <div style={{height: '50vh', width: '45%'}}>
-            <Line type={'line'} data={data} options={options}/>
+            <Line data={data} options={options}/>
             <h5 style={{textAlign: 'center', marginTop: '20px', color: 'gray'}}>Graph Annuel</h5>
         </div>
     );

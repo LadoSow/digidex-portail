@@ -16,8 +16,8 @@ const EditUser = () => {
 
     return (
         <Container disableGutters className={classes.container}>
-            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justify='center'/>
-            <Grid container item xs={8} direction='column' justify='flex-start' alignItems='stretch'>
+            <Grid container item xs={4} className={classes.divImage}  alignItems='stretch' direction='column' justifyContent='center'/>
+            <Grid container item xs={8} direction='column' justifyContent='flex-start' alignItems='stretch'>
                 <Grid className={classes.title}>
                     <Typography variant={'h4'}>
                         Votre Profil:
@@ -25,7 +25,7 @@ const EditUser = () => {
                 </Grid>
                 <Grid>
                     <NotificationContainer />
-                    <Grid container direction='column' justify='flex-start' alignItems='stretch'>
+                    <Grid container direction='column' justifyContent='flex-start' alignItems='stretch'>
                         <Formik initialValues={initialForm} onSubmit={update}>
                             {({handleReset, values, handleChange}) => (
                             <Form>
@@ -35,7 +35,7 @@ const EditUser = () => {
                                             Modifier les informations de votre profil
                                         </Typography>
                                     </Grid>
-                                    <Grid container item justify='center' spacing={2}>
+                                    <Grid container item justifyContent='center' spacing={2}>
                                         <Grid item xs={10} sm={10} >
                                             <Grid container spacing={2}>
                                                 <Grid item xs={6} sm={6} >
@@ -155,7 +155,7 @@ const EditUser = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid className={classes.table}>
-                                    <Grid container direction='row' justify='center' alignItems='center' spacing={2}>
+                                    <Grid container direction='row' justifyContent='center' alignItems='center' spacing={2}>
                                         <Grid item>
                                             <Button type={'submit'} className={classes.submit}>Modifier</Button>
                                         </Grid>

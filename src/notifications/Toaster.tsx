@@ -2,6 +2,9 @@ import React from 'react';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+declare type Theme = 'light' | 'dark' | 'colored';
+const theme: Theme = 'colored';
+
 const globalToastOptions = {
     autoClose: 3000,
     delay: 50,
@@ -13,6 +16,7 @@ const globalToastOptions = {
     newestOnTop: true,
     position: toast.POSITION.BOTTOM_RIGHT,
     transition: Zoom,
+    theme: theme
 };
 
 

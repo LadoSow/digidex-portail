@@ -115,16 +115,16 @@ export function useProfil() {
 
     const update = (values: FormikValues) => {
         if (values.email === '' && values.sit === '' && values.username === ''){
-            warning('💡 Vous devez saisir au moins une donnée pour effectuer une modification !');
+            warning('Vous devez saisir au moins une donnée pour effectuer une modification !');
         }
         else{
             const userToUpdate = toUser(formiktoData(values));
             modifyProfil(userToUpdate).then(r => {
                 if (r){
-                    success('🎉 Profil mis à jour !');
+                    success('Profil mis à jour !');
                 }
                 else{
-                    error('🚨 Un souci, Réessayez plus tard !');
+                    error('Un souci, Réessayez plus tard !');
                 }
             });
         }
